@@ -2,7 +2,7 @@ package ej1;
 
 public class Main {
     public static void main(String[] args) {
-        Estudiante estudiante = new Estudiante("Manuel", "74816410");
+        Estudiante estudiante = new Estudiante("Ernesto", "6417991");
         VersionadorTesis versionadorTesis = new VersionadorTesis();
         Almacenamiento almacenamiento = new Almacenamiento();
 
