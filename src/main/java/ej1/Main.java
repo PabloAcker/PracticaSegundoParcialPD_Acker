@@ -1,6 +1,6 @@
 package ej1;
 
-public class Launch {
+public class Main {
     public static void main(String[] args) {
         Estudiante estudiante = new Estudiante("Manuel", "74816410");
         VersionadorTesis versionadorTesis = new VersionadorTesis();

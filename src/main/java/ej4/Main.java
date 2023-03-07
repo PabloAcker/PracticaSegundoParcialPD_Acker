@@ -1,6 +1,6 @@
 package ej4;
 
-public class Launch {
+public class Main {
     public static void main(String[] args) {
         Inbox inbox = new Inbox();
         GrupoWhapp grupoWhapp = new GrupoWhapp();
