@@ -4,12 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TiendaCelulares {
-    List<Celulares> celularesList = new ArrayList<>();
+    private List<Celulares> celularesList;
     private String nombreTienda;
     private IstrategyVenta strategyVenta;
+    private static final int value1 = 5;
 
-    public TiendaCelulares(String nombreTienda) {
+    public TiendaCelulares(List<Celulares> celularesList, String nombreTienda) {
+        this.celularesList = celularesList;
         this.nombreTienda = nombreTienda;
+
+        if (celularesList.size() > value1) {
+            strategyVenta = new MuchosDatos();
+        } else {
+            strategyVenta = new PocosDatos();
+        }
     }
 
     public List<Celulares> getCelularesList() {
@@ -36,7 +44,7 @@ public class TiendaCelulares {
     public void setStrategyVenta(IstrategyVenta strategyVenta) {
         this.strategyVenta = strategyVenta;
     }
-    public void vender(){
-        this.strategyVenta.estrategia(this.celularesList);
+    public List<Celulares> vender(String modelo){
+        return this.strategyVenta.estrategia(this.celularesList, modelo);
     }
 }

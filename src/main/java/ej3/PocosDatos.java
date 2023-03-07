@@ -1,19 +1,23 @@
 package ej3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PocosDatos implements IstrategyVenta{
     @Override
-    public void estrategia(List<Celulares> celulares) {
+    public List<Celulares> estrategia(List<Celulares> celulares, String modelo) {
+        List<Celulares> resultado = new ArrayList<>();
+
         for (Celulares celu:celulares){
             celu.setStrategy("Pocos Datos");
-            if (celulares.size()<=5){
+            if (celu.getModelo().equals(modelo)){
                 System.out.println("\nIniciando busqueda de pocos celulares...");
+                resultado.add(celu);
                 celu.showInfoCel();
                 System.out.println("=====================\n");
-            }else {
-                System.out.println("Demasiados celulares para este tipo de busqueda");
             }
         }
+
+        return resultado;
     }
 }

@@ -19,8 +19,7 @@ public class General implements IHandler{
             System.out.println("El soldado que resolvio el problema tiene los siguientes datos: ");
             soldado.showInfoSoldado();
         } else {
-            System.out.println("El General no pudo arreglar el problema "+titulo+". Se lo pasa a revision al siguiente nivel superior...");
-            next.orden(soldado, titulo);
+            System.out.println("El General no pudo arreglar el problema "+titulo+". Ningun cuerpo del ejercito pudo resolver este problema");
         }
     }
 }

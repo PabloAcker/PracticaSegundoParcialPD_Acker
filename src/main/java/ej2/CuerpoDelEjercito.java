@@ -19,10 +19,10 @@ public class CuerpoDelEjercito implements IHandler{
         Coronel crnl = new Coronel();
         Cabo cabo = new Cabo();
 
-        this.setNext(gral);
-        gral.setNext(tte);
-        tte.setNext(crnl);
-        crnl.setNext(cabo);
+        this.setNext(cabo);
+        cabo.setNext(crnl);
+        crnl.setNext(tte);
+        tte.setNext(gral);
 
         this.next.orden(soldado, titulo);
     }
